@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace HotelAdmin.Model.Entities
 {
-    internal class CleaningTime {
+    public class CleaningTime {
 
-        int Id { get; set; }
-        DateTime CleanTime { get; set; }
-        bool IsCleaned { get; set; }
-        string Commentary { get; set; }
+        public int Id { get; set; }
+        public DateTime CleanTime { get; set; }
+        public bool IsCleaned { get; set; }
+        public string Commentary { get; set; }
 
         // связь один ко многим
-        int EmployeeId { get; set; }
-        Employee Employee { get; set; }
+        public int EmployeeId { get; set; }
+        public virtual Employee Employee { get; set; }
 
-        int RoomId { get; set; }
-        Room Room { get; set; }
+        public int RoomId { get; set; }
+        public virtual Room Room { get; set; }
     }
 }

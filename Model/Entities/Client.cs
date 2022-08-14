@@ -2,17 +2,17 @@
 
 namespace HotelAdmin.Model.Entities
 {
-    internal class Client {
+    public class Client {
     
-        int Id { get; set; }
-        string ArrivedCity { get; set; }
+        public int Id { get; set; }
+        public string ArrivedCity { get; set; }
 
         // связь один к одному
-        int PeopleId { get; set; }
-        People People { get; set; }
+        public int PeopleId { get; set; }
+        public virtual People People { get; set; }
 
         // связь один ко многим
-        List<Order> Orders { get; set; } = new List<Order>();
-        List<Roommate> Roommates { get; set; } = new List<Roommate>();
+        public virtual List<Order> Orders { get; set; } = new List<Order>();
+        public virtual List<Roommate> Roommates { get; set; } = new List<Roommate>();
         }
 }

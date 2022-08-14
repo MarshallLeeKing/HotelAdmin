@@ -3,21 +3,20 @@ using System.Collections.Generic;
 
 namespace HotelAdmin.Model.Entities
 {
-    internal class Order {
+    public class Order {
 
-        int Id { get; set; }
-        DateTime DateIn { get; set; }
-        DateTime DateOut { get; set; }
-        double? Summ { get; set; }
+        public int Id { get; set; }
+        public DateTime DateIn { get; set; }
+        public DateTime DateOut { get; set; }
+        public double? Summ { get; set; }
 
         // связь один ко многим
-        int ClientId { get; set; }
-        Client Client { get; set; }
+        public int ClientId { get; set; }
+        public virtual Client Client { get; set; }
 
-        int RoomId { get; set; }
-        Room Room { get; set; }
+        public int RoomId { get; set; }
+        public virtual Room Room { get; set; }
 
-        // связь многие ко многим
-        List<Roommate> Rommates { get; set; } = new List<Roommate>();
+        public virtual List<Roommate> Rommates { get; set; } = new List<Roommate>();
     }
 }

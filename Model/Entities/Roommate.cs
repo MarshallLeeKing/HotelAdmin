@@ -1,14 +1,14 @@
 ﻿namespace HotelAdmin.Model.Entities
 {
-    internal class Roommate {
+    public class Roommate {
 
-        int Id { get; set; }
+        public int Id { get; set; }
 
         // связь один ко многим
-        int OrderId { get; set; }
-        Order Order { get; set; }
+        public int OrderId { get; set; }
+        public virtual Order Order { get; set; }
 
-        int ClientId { get; set; }
-        Client Client { get; set; }
+        public int ClientId { get; set; }
+        public virtual Client Client { get; set; }
     }
 }

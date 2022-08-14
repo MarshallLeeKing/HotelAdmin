@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace HotelAdmin.Model.Entities
 {
-    internal class PriceGroup {
+    public class PriceGroup {
     
-        int Id { get; set; }
-        string Name { get; set; }
-        double Price { get; set; }
-        DateTime DateStart { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public DateTime DateStart { get; set; }
 
         // связь один ко многим
-        List<Room> Rooms { get; set; } = new List<Room>();
+        public virtual List<Room> Rooms { get; set; } = new List<Room>();
     }
 }

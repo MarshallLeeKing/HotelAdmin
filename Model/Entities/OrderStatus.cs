@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HotelAdmin.Model.Entities
 {
-    internal class OrderStatus {
+    public class OrderStatus {
 
-        int Id { get; set; }
-        string Status { get; set; }
+        public int Id { get; set; }
+        public string Status { get; set; }
 
-        List<Order> Orders { get; set; } = new List<Order>();
+        public virtual List<Order> Orders { get; set; } = new List<Order>();
     }
 }

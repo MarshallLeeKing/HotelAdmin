@@ -4,20 +4,20 @@ using System.Collections.Generic;
 
 namespace HotelAdmin.Model.Entities
 {
-    internal class People {
-        int Id { get; set; }
+    public class People {
+        public int Id { get; set; }
 
-        string Name { get; set; }
-        string Surname { get; set; }
-        string Patronim { get; set; }
-        string Passport { get; set; }
-        
-        bool Male { get; set; }
-        
-        DateTime BirthDate { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Patronim { get; set; }
+        public string Passport { get; set; }
+
+        public bool Male { get; set; }
+
+        public DateTime BirthDate { get; set; }
 
         // связь один к одному
-        Employee Employee { get; set; }
-        Client Client { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Client Client { get; set; }
     }
 }
