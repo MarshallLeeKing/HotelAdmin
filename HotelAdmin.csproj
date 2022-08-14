@@ -69,6 +69,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Entities\CleaningTime.cs" />
+    <Compile Include="Model\Entities\Client.cs" />
+    <Compile Include="Model\Entities\Employee.cs" />
+    <Compile Include="Model\Entities\Order.cs" />
+    <Compile Include="Model\Entities\OrderStatus.cs" />
+    <Compile Include="Model\Entities\People.cs" />
+    <Compile Include="Model\Entities\PriceGroup.cs" />
+    <Compile Include="Model\Entities\Room.cs" />
+    <Compile Include="Model\Entities\Roommate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
