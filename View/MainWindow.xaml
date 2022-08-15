@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelAdmin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Loaded="Window_Loaded"
+        Title="HotelAdmin" Height="900" Width="1400">
+    
     <Grid>
-        
+
+        <DataGrid
+            Name="DgMain"
+            Grid.Row="3"
+            Grid.Column="1"
+            AllowDrop="True"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            CanUserReorderColumns="False"
+            CanUserResizeColumns="False"
+            CanUserResizeRows="False"
+            CanUserSortColumns="False"
+            FontSize="20"
+            IsReadOnly="True"
+            SelectionMode="Single"
+            SelectionUnit="FullRow"
+            VerticalScrollBarVisibility="Visible">
+
+        </DataGrid>
+
+
     </Grid>
 </Window>

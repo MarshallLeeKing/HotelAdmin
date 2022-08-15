@@ -75,6 +75,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Entities\EmployeeStatus.cs" />
+    <Compile Include="Model\Entities\EmployeesTimesheet.cs" />
+    <Compile Include="Model\Entities\EmployeesWorkHistory.cs" />
     <Compile Include="Model\HotelDb.cs" />
     <Compile Include="Model\HotelDbInitializer.cs" />
     <Compile Include="View\MainWindow.xaml.cs">

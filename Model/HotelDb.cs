@@ -27,7 +27,16 @@ namespace HotelAdmin.Model
         
         // данные о сотрудниках
         public DbSet<Employee> Employees { get; set; }
+
+        // данные о статусах сотрудников
+        public DbSet<EmployeeStatus> EmployeeStatuses { get; set; }
+
+        // таблица — табель рабочего времени
+        public DbSet<EmployeesTimesheet> EmployeeTimesheets { get; set; }
         
+        // данные о истории выплат сотрудникам
+        public DbSet<EmployeesWorkHistory> EmployeesWorkHistories { get; set; }
+
         // данные о заказах
         public DbSet<Order> Orders { get; set; }
         
