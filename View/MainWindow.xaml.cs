@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using HotelAdmin.Model;
+using HotelAdmin.ViewModel;
 using System.Diagnostics;
 
 namespace HotelAdmin
@@ -24,11 +25,11 @@ namespace HotelAdmin
     public partial class MainWindow : Window
     {
 
-        private HotelDb _dbSet; 
+        private HotelDbController _dbSet; 
         
-        public MainWindow() : this(new HotelDb()) { }
+        public MainWindow() : this(new HotelDbController()) { }
 
-        public MainWindow(HotelDb dbSet) {
+        public MainWindow(HotelDbController dbSet) {
             InitializeComponent();
 
             _dbSet = dbSet;
@@ -37,10 +38,7 @@ namespace HotelAdmin
         // загрузка окна
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             // привязка колекции к DataGrid
-
-            // new List
-
-            DgMain.ItemsSource = _dbSet.;
+            DgMain.ItemsSource = _dbSet.GetTablePeoples();
 
             Trace.WriteLine("Hello!");
 

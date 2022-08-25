@@ -10,13 +10,13 @@ namespace HotelAdmin.Model.Entities
     public class CleaningTime {
 
         public int Id { get; set; }
-        
+
         // дата и время уборки
         public DateTime CleanTime { get; set; }
-        
+
         // выполнена уборка или нет
         public bool IsCleaned { get; set; }
-        
+
         // коментарий (почему не выполнена)
         public string Commentary { get; set; }
 

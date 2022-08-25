@@ -75,11 +75,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Entities\City.cs" />
     <Compile Include="Model\Entities\EmployeeStatus.cs" />
     <Compile Include="Model\Entities\EmployeesTimesheet.cs" />
     <Compile Include="Model\Entities\EmployeesWorkHistory.cs" />
     <Compile Include="Model\HotelDb.cs" />
+    <Compile Include="Model\HotelDbConfig\CityConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\CleaningTimeConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\ClientConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\EmployeeConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\EmployeeStatusConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\EmployeesTimesheetConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\EmployeesWorkHistoryConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\OrderConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\OrderStatusConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\PeopleConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\PriceGroupConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\RoomConfig.cs" />
+    <Compile Include="Model\HotelDbConfig\RoommateConfig.cs" />
     <Compile Include="Model\HotelDbInitializer.cs" />
+    <Compile Include="ViewModel\HotelDbController.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -121,9 +136,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

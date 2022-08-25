@@ -5,15 +5,15 @@ namespace HotelAdmin.Model.Entities
 {
     // сущность — рабочий (служащий)
     public class Employee {
-        
+
         public int Id { get; set; }
 
         // зарплата в час (ставка)
         public double BaseSalaryHr { get; set; }
-        
+
         // дата принятия на работу
         public DateTime DateIn { get; set; }
-        
+
         // дата увольнения
         public DateTime? DateOut { get; set; }
 

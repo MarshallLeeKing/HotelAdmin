@@ -3,6 +3,9 @@ using System;
 using System.Data.Entity;
 using System.Linq;
 
+using HotelAdmin.Model.HotelDbConfig;
+using System.Data.Entity.ModelConfiguration.Conventions;
+
 namespace HotelAdmin.Model
 {
     public class HotelDb : DbContext
@@ -24,7 +27,10 @@ namespace HotelAdmin.Model
         
         // данные о клиентах
         public DbSet<Client> Clients { get; set; }
-        
+
+        // данные о городах
+        public DbSet<City> Cities { get; set; }
+
         // данные о сотрудниках
         public DbSet<Employee> Employees { get; set; }
 
@@ -57,6 +63,24 @@ namespace HotelAdmin.Model
 
         #endregion
 
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+
+            // решаем проблему каскадного удаления таблиц при наличии нескольких связанных таблиц по иерархии
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+            // конфигурирование таблиц к БД
+            modelBuilder.Configurations.Add(new PeopleConfig());
+            modelBuilder.Configurations.Add(new ClientConfig());
+            modelBuilder.Configurations.Add(new EmployeeConfig());
+            modelBuilder.Configurations.Add(new EmployeeStatusConfig());
+            modelBuilder.Configurations.Add(new CityConfig());
+            modelBuilder.Configurations.Add(new RoomConfig());
+            modelBuilder.Configurations.Add(new PriceGroupConfig());
+            modelBuilder.Configurations.Add(new CleaningTimeConfig());
+            modelBuilder.Configurations.Add(new EmployeesWorkHistoryConfig());
+
+        }
 
     }
 }

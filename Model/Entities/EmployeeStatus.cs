@@ -4,9 +4,9 @@ namespace HotelAdmin.Model.Entities
 {
     // таблица статусов рабочих (работает, отпуск, уволен, больничный)
     public class EmployeeStatus {
-        
+
         public int Id { get; set; }
-        
+
         // непосредственно статус
         public string Status { get; set; }
 

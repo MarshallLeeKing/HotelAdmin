@@ -8,7 +8,7 @@ namespace HotelAdmin.Model.Entities
 {
     // таблица истории взаимодействия с рабочими
     public class EmployeesWorkHistory {
-    
+
         public int Id { set; get; }
 
         // дата начала периода
