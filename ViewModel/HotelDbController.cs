@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Collections;
-using System.Text;
-using System.Threading.Tasks;
 
 using HotelAdmin.Model;
 
 namespace HotelAdmin.ViewModel {
-    public class HotelDbController : INotifyPropertyChanged {
+    internal class HotelDbController : ViewModel {
 
         // база данных
         private HotelDb _db;
@@ -43,15 +38,9 @@ namespace HotelAdmin.ViewModel {
         public IEnumerable GetTableTimeSheet() =>
             _db.EmployeeTimesheets.Select(ts => new { ts.Employee.People.Name, ts.Employee.People.Surname, ts.DateStart, ts.DateEnd }).ToList();
 
-        // вывод таблицы TimeSheet
+        // вывод таблицы TimeEmployeesWorkHistory
         public IEnumerable GetTableEmployeesWorkHistory() =>
             _db.EmployeesWorkHistories.Select(e => new { e.Employee.People.Name, e.Employee.People.Surname, e.EmployeeStatus.Status, e.Salary, e.DateStart, e.DateEnd });
-
-        // имплементриуем INotifyPropertyChanged для обновления привязанной к форме БД
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string name = null) {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        
     }
 }

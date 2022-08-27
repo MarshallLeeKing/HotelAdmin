@@ -25,23 +25,12 @@ namespace HotelAdmin
     public partial class MainWindow : Window
     {
 
-        private HotelDbController _dbSet; 
+        private static int _i = 0;
         
-        public MainWindow() : this(new HotelDbController()) { }
-
-        public MainWindow(HotelDbController dbSet) {
+        public MainWindow() {
             InitializeComponent();
 
-            _dbSet = dbSet;
         }
 
-        // загрузка окна
-        private void Window_Loaded(object sender, RoutedEventArgs e) {
-            // привязка колекции к DataGrid
-            DgMain.ItemsSource = _dbSet.GetTablePeoples();
-
-            Trace.WriteLine("Hello!");
-
-        } // Window_Loaded
     }
 }
